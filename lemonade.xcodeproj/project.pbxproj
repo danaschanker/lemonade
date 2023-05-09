@@ -60,6 +60,7 @@
 		69C9DAE529AD7D7E00B5225E /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		69C9DAE729AD7D9700B5225E /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		69EB21DE2A032F3600C7E547 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		69EB21E02A0B116700C7E547 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 		69C9DAAF29AD7D4F00B5225E = {
 			isa = PBXGroup;
 			children = (
+				69EB21E02A0B116700C7E547 /* README.md */,
 				69901EF629F747C9001DF28F /* SettingsView.swift */,
 				69C9DABA29AD7D4F00B5225E /* lemonade */,
 				69C9DACB29AD7D5500B5225E /* lemonadeTests */,
