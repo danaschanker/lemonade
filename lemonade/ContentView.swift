@@ -16,48 +16,53 @@ struct ContentView: View {
     @State var password: String = ""
     var body: some View {
         NavigationView {
-        VStack {
-            Image("userImage")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 150, height: 150)
-                .clipped()
-                .cornerRadius(150)
-                .padding(.bottom, 75)
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Welcome!")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
-                .padding(.bottom, 20)
-            
-            
-            TextField("Username", text: $username)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            SecureField("Password", text: $password)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            Text("LOGIN")
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .frame(width: 220, height: 60)
-                .background(Color.green)
-                .cornerRadius(15.0)
-            
-            //NavigationView {
-                     VStack {
-                        Text("Navigation Link below:")
-                        NavigationLink(destination: HomePageView()) {
-                           Text("Navigate here.")
-                        }
-                     }
-                  }
+            VStack {
+                Image("userImage")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 150, height: 150)
+                    .clipped()
+                    .cornerRadius(150)
+                    .padding(.bottom, 75)
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text("Welcome!")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(.bottom, 20)
+                
+                
+                TextField("Username", text: $username)
+                    .padding()
+                    .background(lightGreyColor)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                SecureField("Password", text: $password)
+                    .padding()
+                    .background(lightGreyColor)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                HStack {
+                    NavigationLink(destination: HomePageView()) {
+                        Text("Login")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 150, height: 60)
+                            .background(Color.green)
+                            .cornerRadius(15.0)
+                    }
+                    NavigationLink(destination: CreateAccount()) {
+                        Text("Create Account")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 200, height: 60)
+                            .background(Color.green)
+                            .cornerRadius(15.0)
+                    }
+                }
+            }
                    
             Button(action: {print("Button tapped")}) {
            

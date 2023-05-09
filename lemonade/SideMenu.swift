@@ -15,6 +15,7 @@ struct MenuItem: Identifiable {
     var text: String
 }
 
+
 var userActions: [MenuItem] = [
     MenuItem(id: 4001, icon: "person.circle.fill", text: "My Account"),
     MenuItem(id: 4002, icon: "bag.fill", text: "Enter Money"),
@@ -143,20 +144,21 @@ struct menuLink: View {
     var icon: String
     var text: String
     var body: some View {
-        NavigationLink(destination: MyAccountView()){ HStack {
-            Image(systemName: icon)
-                .resizable()
-                .frame(width: 20, height: 20)
-                .foregroundColor(.white)
-                .padding(.trailing, 18)
-            Text(text)
-                .foregroundColor(.white)
-                .font(.body)
-        }
-            NavigationLink(destination: EnterMoneyView()){ HStack {
-                
+        NavigationLink(destination: {if (text.contains("History")){ HistoryView() }
+            else if (text.contains("Enter Money")){ EnterMoneyView() }
+            else if (text.contains("Logout")) { ContentView() }
+            else if (text.contains("Settings")) { SettingsView() }
+            else {MyAccountView() } } ){ HStack {
+                Image(systemName: icon)
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .foregroundColor(.white)
+                    .padding(.trailing, 18)
+                Text(text)
+                    .foregroundColor(.white)
+                    .font(.body)
             }
             }
-        }
     }
+    
 }

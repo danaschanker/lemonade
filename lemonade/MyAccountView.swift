@@ -10,12 +10,11 @@ import SwiftUI
 struct MyAccountView: View {
     var body: some View {
         List{
-            Text("Name")
-            Text("Password")
-            Text("Phone Number")
-            Text("Email")
-            Text("Address")
-            Text("Full Account Value")
+            Text("Dana S.")
+            Text("6501234567")
+            Text("ds@yahoo.org")
+            Text("123 1st Street")
+            Text("Full Account Value : $193.99")
         }
     }
 }
